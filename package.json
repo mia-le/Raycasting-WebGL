@@ -1,0 +1,17 @@
+{
+  "name": "raycasting-project",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhanhminhanh/raycasting-project.git"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
+  },
+  "author": "Mia Le",
+  "license": "MIT"
+}
