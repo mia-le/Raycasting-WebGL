@@ -33,7 +33,7 @@ class Scene extends UniformProvider {
         this.gameObjects.push(this.traceQuad);
 
         this.camera = new PerspectiveCamera(...this.programs);
-        this.camera.position.set(0, 5, 25);
+        this.camera.position.set(0, 5, 18);
         this.camera.update();
         this.addComponentsAndGatherUniforms(...this.programs);
 
@@ -64,49 +64,50 @@ class Scene extends UniformProvider {
 
         const pawnHead = this.addClippedQuadric();
         pawnHead.makeUnitSphere();
-        pawnHead.transform(new Mat4().translate(-10, 0, 0));
+        pawnHead.transform(new Mat4().scale(1.3,1.3,1.3).translate(-11, 0, -3));
         pawnHead.materialColor = new Vec3(1.0,1.0,1.0);
         pawnHead.wooden = 1.0;
 
         const pawnBody = this.addClippedQuadric();
         pawnBody.makeUnitCone();
-        pawnBody.transform(new Mat4().translate(-10, 0, 0));
+        pawnBody.transform(new Mat4().scale(2,2,2).translate(-11, 0, -3));
+        pawnBody.transform(new Mat4().translate(0, 0, 0));
         pawnBody.materialColor = new Vec3(1.0,1.0,1.0);
         pawnBody.wooden = 1.0;
 
         const kingCrown = this.addClippedQuadric();
         kingCrown.makeUnitParaboloid();
-        kingCrown.transform(new Mat4().scale(1.5,1.5,1).translate(5, 1.7, 0));
+        kingCrown.transform(new Mat4().scale(1.9,1.9,1.4).translate(3.5, 1.8, -3));
         kingCrown.materialColor = new Vec3(1.0,1.0,1.0);
 
         const kingHead = this.addClippedQuadric();
         kingHead.makeUnitSphere();
-        kingHead.transform(new Mat4().translate(5, 1.0, 0));
+        kingHead.transform(new Mat4().scale(1.4,1.4,1.4).translate(3.5, 1.5, -3));
         kingHead.materialColor = new Vec3(1.0,1.0,1.0);
 
         const kingBody = this.addClippedQuadric();
         kingBody.makeUnitCylinder();
-        kingBody.transform(new Mat4().scale(1.1,2.4,1.0).translate(5, -2.2, 0));
+        kingBody.transform(new Mat4().scale(1.5,2.8,1.4).translate(3.5, -2.2, -3));
         kingBody.materialColor = new Vec3(1.0,1.0,1.0);
 
         const bishopHead = this.addClippedQuadric();
         bishopHead.makeBishopHead();
-        bishopHead.transform(new Mat4().translate(10, 0.5, 0));
+        bishopHead.transform(new Mat4().scale(1.3,1.3,1.3).translate(11, 0.6, -3));
         bishopHead.materialColor = new Vec3(1.0,1.0,1.0);
 
         const bishopBody = this.addClippedQuadric();
         bishopBody.makeUnitCone();
-        bishopBody.transform(new Mat4().translate(10, 0, 0).scale(1.0,1.5,1.0));
+        bishopBody.transform(new Mat4().scale(1,1,1).translate(11, 0, -3));
         bishopBody.materialColor = new Vec3(1.0,1.0,1.0);
 
         const rookHead = this.addClippedQuadric();
         rookHead.makeBishopHead();
-        rookHead.transform(new Mat4().translate(-5, 0.5, 1));
+        rookHead.transform(new Mat4().translate(-4, 0.5, -3));
         rookHead.materialColor = new Vec3(1.0,1.0,1.0);
 
         const rookBody = this.addClippedQuadric();
         rookBody.makeUnitCylinder();
-        rookBody.transform(new Mat4().scale(1.1,1.5,1.0).translate(-5, -1.5, 1));
+        rookBody.transform(new Mat4().scale(1.5,1.7,1.4).translate(-4, -2.5, -3));
         rookBody.materialColor = new Vec3(1.0,1.0,1);
     }
 

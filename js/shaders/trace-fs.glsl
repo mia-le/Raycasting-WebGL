@@ -266,8 +266,8 @@ void main(void) {
                 /*Set Checker Pattern*/
                 if ( checker == 1){
                     vec3 oneColor = vec3(0., 0., 0.);
-                    if ((fract(hitPos.x / 15.0)<0.5 && fract(hitPos.y /15.5)<0.5)
-                    || (fract(hitPos.x / 15.0)>0.5 && fract(hitPos.y /15.0)>0.5)
+                    if ((fract(hitPos.x /15.0)<0.5 && fract(hitPos.z /15.0)<0.5)
+                    || (fract(hitPos.x /15.0)>0.5 && fract(hitPos.z /15.0)>0.5)
                     ){
                         oneColor.rgb = abs(sin(vec3(0.0, 0.0, 0.0)));
                     } else {
